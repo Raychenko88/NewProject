@@ -1,14 +1,13 @@
-package GeometricFigures.Triangle;
+package models.triangle;
 
-import AbstractClasses.AbstractShape;
+import abstracts.AbstractShape;
 
 
 public class Triangle extends AbstractShape {
     double width;
     double height;
 
-    public Triangle(String s, double width, double height) {
-        super(s);
+    public Triangle(double width, double height) {
         this.width = width;
         this.height = height;
     }

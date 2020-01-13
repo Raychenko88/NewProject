@@ -1,12 +1,11 @@
-package GeometricFigures.Square;
+package models.square;
 
-import AbstractClasses.AbstractShape;
+import abstracts.AbstractShape;
 
 
 public class Square extends AbstractShape {
     double side;
-    public Square(String s, double side) {
-        super(s);
+    public Square(double side) {
         this.side = side;
     }
 

@@ -1,12 +1,11 @@
-package GeometricFigures.Circle;
+package models.circle;
 
-import AbstractClasses.AbstractShape;
+import abstracts.AbstractShape;
 
 
 public class Circle extends AbstractShape {
     double radius;
-    public Circle(String s, double r) {
-        super(s);
+    public Circle(double r) {
         radius = r;
     }
 
