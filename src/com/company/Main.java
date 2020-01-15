@@ -8,7 +8,7 @@ import java.util.logging.Logger;
 public class Main {
     private static Logger log = Logger.getLogger(Main.class.getName());
     public static void main(String[] args) {
-        Circle circle = new Circle(15);
+        Circle circle = new Circle(2);
         log.info(String.valueOf(circle.getArea()));
         Square square = new Square( 4);
         log.info(String.valueOf(square.getArea()));
