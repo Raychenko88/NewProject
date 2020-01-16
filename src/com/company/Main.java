@@ -6,8 +6,6 @@ import models.square.Square;
 import models.triangle.Triangle;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -21,13 +19,27 @@ public class Main{
         Triangle triangle = new Triangle(5, 45);
         log.info(String.valueOf(triangle.getArea()));
 
-        
-        List <Double> list = new ArrayList<>();
-        list.add(circle.getArea());
-        list.add(square.getArea());
-        list.add(triangle.getArea());
 
-        log.info(String.valueOf(Collections.min(list)));
-        log.info(String.valueOf(Collections.max(list)));
+        List <AbstractShape> list = new ArrayList<>();
+        list.add(circle);
+        list.add(square);
+        list.add(triangle);
+
+        double min = list.get(0).getArea();
+        String minStr = String.valueOf(list.get(0).getClass());
+        double max = list.get(0).getArea();
+        String maxStr = String.valueOf(list.get(0).getClass());
+
+        for (int i = 1; i < list.size(); i++){
+            if (min > list.get(i).getArea()){
+                min = list.get(i).getArea();
+                minStr = String.valueOf(list.get(i).getClass());
+            }else if (max < list.get(i).getArea()){
+                max = list.get(i).getArea();
+                maxStr = String.valueOf(list.get(i).getClass());
+            }
+        }
+        log.info(minStr + " " + min);
+        log.info(maxStr + " " + max);
     }
 }

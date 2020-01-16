@@ -15,6 +15,4 @@ public class Circle extends AbstractShape {
         result = Math.PI * radius * radius;
         return result;
     }
-
-
 }

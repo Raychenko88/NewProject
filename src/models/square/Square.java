@@ -15,6 +15,4 @@ public class Square extends AbstractShape {
         result = Math.pow(side, 2);
         return result;
     }
-
-
 }
